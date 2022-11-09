@@ -18,3 +18,11 @@ texture = ExtResource( 1 )
 position = Vector2( 0, 1 )
 rotation = 1.5708
 shape = SubResource( 1 )
+
+[node name="UnitStateManager" type="Node" parent="."]
+
+[node name="Idle" type="Node" parent="UnitStateManager"]
+
+[node name="Moving" type="Node" parent="UnitStateManager"]
+
+[node name="Scooching" type="Node" parent="UnitStateManager"]

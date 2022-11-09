@@ -1,14 +1,14 @@
 """ How exciting! My first game "class". This is the base for other units, and 
-
+there will be more notes than really needed, but I'm learning so kindly bugger off
 """
 
 extends KinematicBody2D
 
 #variable declaration and initialzation section
-export (int) var speed = 200 #just a variable but also exported to the editor inspector
+export (int) var speed = 200 
 
-onready var target = position # current spot is destination upon initialization
-var velocity = Vector2.ZERO  # no movement when started
+onready var target = position
+var velocity = Vector2.ZERO  
 
 
 
@@ -19,8 +19,8 @@ var velocity = Vector2.ZERO  # no movement when started
 
 #target setting function
 func _input(event): #event only happens once if held. for held commands, use Input singleton for polling.
-	if event.is_action_pressed("click"): #if left mouse clicked
-		target = get_global_mouse_position() #set the target to the mouse position
+	if event.is_action_pressed("click"): #left mouse click
+		target = get_global_mouse_position() 
 
 
 #unit movement function
