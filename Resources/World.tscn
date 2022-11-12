@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Units/Blobbert.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Buildings/Grayperton.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Art/Grass.png" type="Texture" id=3]
+[ext_resource path="res://Resources/Units/Blobbert.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Resources/Buildings/Grayperton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Resources/Art/Grass.png" type="Texture" id=3]
 
 [sub_resource type="TileSet" id=1]
 0/name = "Grass.png 0"
@@ -41,6 +41,3 @@ position = Vector2( 63, 106 )
 
 [node name="Blobbert2" parent="YSort" instance=ExtResource( 1 )]
 position = Vector2( 175, 82 )
-
-[node name="Blobbert3" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( 83, 26 )

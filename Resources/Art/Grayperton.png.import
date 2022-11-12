@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Grass.png-dedf3e571182fe7fe3cacd97bc944bc6.stex"
+path="res://.import/Grayperton.png-1b8dee24460b606d626ad6048f87eb9a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Grass.png"
-dest_files=[ "res://.import/Grass.png-dedf3e571182fe7fe3cacd97bc944bc6.stex" ]
+source_file="res://Resources/Art/Grayperton.png"
+dest_files=[ "res://.import/Grayperton.png-1b8dee24460b606d626ad6048f87eb9a.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Blobbert.png-99d3eb751074e175c1bf505e838bcfdf.stex"
+path="res://.import/Marker.png-60f3beecc3870e2c197a7b02ef839e4c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Blobbert.png"
-dest_files=[ "res://.import/Blobbert.png-99d3eb751074e175c1bf505e838bcfdf.stex" ]
+source_file="res://Resources/Art/Marker.png"
+dest_files=[ "res://.import/Marker.png-60f3beecc3870e2c197a7b02ef839e4c.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Coobulu.png-6fdc45efe96320774a1e7efd80373736.stex"
+path="res://.import/Shtibbletin.png-3ce7df5684e8fb78f9aadd6f779bb5f5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Coobulu.png"
-dest_files=[ "res://.import/Coobulu.png-6fdc45efe96320774a1e7efd80373736.stex" ]
+source_file="res://Resources/Art/Shtibbletin.png"
+dest_files=[ "res://.import/Shtibbletin.png-3ce7df5684e8fb78f9aadd6f779bb5f5.stex" ]
 
 [params]
 
