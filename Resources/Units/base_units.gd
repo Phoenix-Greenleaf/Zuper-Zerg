@@ -1,8 +1,5 @@
-""" How exciting! My first game "class". This is the base for other units, and 
-there will be more notes than really needed, but I'm learning so kindly bugger off
-"""
-
 extends KinematicBody2D
+class_name BaseUnits
 
 #variable declaration and initialzation section
 export (int) var speed = 200 

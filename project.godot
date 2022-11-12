@@ -8,6 +8,22 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Node",
+"class": "BaseState",
+"language": "GDScript",
+"path": "res://Resources/States/base_state.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "BaseUnits",
+"language": "GDScript",
+"path": "res://Resources/Units/base_units.gd"
+} ]
+_global_script_class_icons={
+"BaseState": "",
+"BaseUnits": ""
+}
+
 [application]
 
 config/name="Zuper Zerg"

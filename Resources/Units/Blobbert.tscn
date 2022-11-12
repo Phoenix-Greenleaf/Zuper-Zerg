@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
+[ext_resource path="res://Resources/Units/blobbert.gd" type="Script" id=1]
 [ext_resource path="res://Resources/Art/Blobbert.png" type="Texture" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
@@ -7,6 +8,7 @@ radius = 2.0
 height = 8.0
 
 [node name="Blobbert" type="KinematicBody2D"]
+script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, -5 )
