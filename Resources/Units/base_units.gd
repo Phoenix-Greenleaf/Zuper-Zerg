@@ -7,17 +7,31 @@ export (int) var speed = 200
 onready var target = position
 var velocity = Vector2.ZERO  
 
+onready var states = $StateManager
+
+func _ready() -> void:
+	states.init(self)
+
+func _unhandled_input(event: InputEvent) -> void:
+	states.input(event)
+
+func _physics_process(delta: float) -> void:
+	states.physics_process(delta)
+
+func _process(delta: float) -> void:
+	states.process(delta)
 
 
 
 
 
 
+"""
 
-#target setting function
-func _input(event): #event only happens once if held. for held commands, use Input singleton for polling.
-	if event.is_action_pressed("click"): #left mouse click
-		target = get_global_mouse_position() 
+Code to move down to states, off of individual units
+
+
+
 
 
 #unit movement function
@@ -26,3 +40,6 @@ func _physics_process(_delta): #move and slide uses delta, but we do not hand it
 	
 	if position.distance_to(target) > 5: #distance check to target
 		velocity = move_and_slide(velocity)
+
+
+"""

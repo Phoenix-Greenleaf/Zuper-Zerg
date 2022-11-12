@@ -1,7 +1,10 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Resources/Units/blobbert.gd" type="Script" id=1]
 [ext_resource path="res://Resources/Art/Blobbert.png" type="Texture" id=2]
+[ext_resource path="res://Resources/States/state_manager.gd" type="Script" id=3]
+[ext_resource path="res://Resources/States/unit_idle.gd" type="Script" id=4]
+[ext_resource path="res://Resources/States/moving.gd" type="Script" id=5]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 2.0
@@ -18,3 +21,12 @@ texture = ExtResource( 2 )
 position = Vector2( 0, 1 )
 rotation = 1.5708
 shape = SubResource( 1 )
+
+[node name="StateManager" type="Node" parent="."]
+script = ExtResource( 3 )
+
+[node name="UnitIdle" type="Node" parent="StateManager"]
+script = ExtResource( 4 )
+
+[node name="Moving" type="Node" parent="StateManager"]
+script = ExtResource( 5 )

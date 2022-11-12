@@ -9,7 +9,7 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Node",
+"base": "Node2D",
 "class": "BaseState",
 "language": "GDScript",
 "path": "res://Resources/States/base_state.gd"
@@ -18,10 +18,22 @@ _global_script_classes=[ {
 "class": "BaseUnits",
 "language": "GDScript",
 "path": "res://Resources/Units/base_units.gd"
+}, {
+"base": "BaseUnits",
+"class": "Blobbert",
+"language": "GDScript",
+"path": "res://Resources/Units/blobbert.gd"
+}, {
+"base": "Node",
+"class": "StateManager",
+"language": "GDScript",
+"path": "res://Resources/States/state_manager.gd"
 } ]
 _global_script_class_icons={
 "BaseState": "",
-"BaseUnits": ""
+"BaseUnits": "",
+"Blobbert": "",
+"StateManager": ""
 }
 
 [application]
