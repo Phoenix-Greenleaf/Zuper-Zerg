@@ -4,10 +4,11 @@ class_name BaseUnits
 #variable declaration and initialzation section
 export (int) var speed = 200 
 
-onready var target = position
+#onready var target = position
 var velocity = Vector2.ZERO  
 
 onready var states = $StateManager
+onready var target = position
 
 func _ready() -> void:
 	states.init(self)

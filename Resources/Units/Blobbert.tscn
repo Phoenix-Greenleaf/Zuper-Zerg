@@ -22,11 +22,14 @@ position = Vector2( 0, 1 )
 rotation = 1.5708
 shape = SubResource( 1 )
 
-[node name="StateManager" type="Node" parent="."]
+[node name="StateManager" type="Node2D" parent="."]
 script = ExtResource( 3 )
+starting_state = NodePath("UnitIdle")
 
-[node name="UnitIdle" type="Node" parent="StateManager"]
+[node name="UnitIdle" type="Node2D" parent="StateManager"]
 script = ExtResource( 4 )
+moving_node = NodePath("../Moving")
 
-[node name="Moving" type="Node" parent="StateManager"]
+[node name="Moving" type="Node2D" parent="StateManager"]
 script = ExtResource( 5 )
+unit_idle_node = NodePath("../UnitIdle")
