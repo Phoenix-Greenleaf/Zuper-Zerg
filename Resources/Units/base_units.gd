@@ -8,10 +8,12 @@ export (int) var speed = 200
 var velocity = Vector2.ZERO  
 
 onready var states = $StateManager
+#onready var stateLabel = $StateLabel
 onready var target = position
 
 func _ready() -> void:
 	states.init(self)
+	
 
 func _unhandled_input(event: InputEvent) -> void:
 	states.input(event)

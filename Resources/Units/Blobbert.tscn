@@ -1,14 +1,21 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Resources/Units/blobbert.gd" type="Script" id=1]
 [ext_resource path="res://Resources/Art/Blobbert.png" type="Texture" id=2]
 [ext_resource path="res://Resources/States/state_manager.gd" type="Script" id=3]
 [ext_resource path="res://Resources/States/unit_idle.gd" type="Script" id=4]
 [ext_resource path="res://Resources/States/moving.gd" type="Script" id=5]
+[ext_resource path="res://Resources/Font/Long_Shot.ttf" type="DynamicFontData" id=6]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 2.0
 height = 8.0
+
+[sub_resource type="DynamicFont" id=2]
+size = 100
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 6 )
 
 [node name="Blobbert" type="KinematicBody2D"]
 script = ExtResource( 1 )
@@ -28,8 +35,23 @@ starting_state = NodePath("UnitIdle")
 
 [node name="UnitIdle" type="Node2D" parent="StateManager"]
 script = ExtResource( 4 )
+state_label_node = NodePath("../../StateLabel")
 moving_node = NodePath("../Moving")
 
 [node name="Moving" type="Node2D" parent="StateManager"]
 script = ExtResource( 5 )
+state_label_node = NodePath("../../StateLabel")
 unit_idle_node = NodePath("../UnitIdle")
+
+[node name="StateLabel" type="Label" parent="."]
+margin_left = -30.0
+margin_top = -24.0
+margin_right = 565.0
+margin_bottom = 81.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_scale = Vector2( 0.1, 0.1 )
+custom_fonts/font = SubResource( 2 )
+text = "State Label stuff"
+align = 1
+valign = 1

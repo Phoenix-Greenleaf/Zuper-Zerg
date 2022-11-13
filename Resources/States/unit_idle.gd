@@ -1,15 +1,19 @@
 extends BaseState
 
+export (NodePath) var state_label_node
 export (NodePath) var moving_node
 export var distanceCheck := 10
 
+onready var state_label: Label = get_node(state_label_node)
 onready var moving_state: BaseState = get_node(moving_node)
+
 
 
 
 func enter() -> void:
 	.enter()
 	parent_unit.velocity = Vector2.ZERO
+	state_label.text = "Idle"
 
 
 #func input(event: InputEvent) -> BaseState:

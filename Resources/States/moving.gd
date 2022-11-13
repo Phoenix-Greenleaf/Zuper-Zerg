@@ -1,9 +1,18 @@
 extends BaseState
 
+export (NodePath) var state_label_node
 export (NodePath) var unit_idle_node
 export (int) var moveDistanceCheck = 5
 
+onready var state_label: Label = get_node(state_label_node)
 onready var unit_idle_state: BaseState =  get_node(unit_idle_node)
+
+
+func enter() -> void:
+	.enter()
+	state_label.text = "Moving"
+	
+
 
 
 func physics_process(delta: float) -> BaseState:
