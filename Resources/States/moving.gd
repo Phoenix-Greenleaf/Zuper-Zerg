@@ -22,19 +22,18 @@ var min_wander_x = -wander_vect_dist
 var max_wander_x = wander_vect_dist
 var min_wander_y = -wander_vect_dist
 var max_wander_y = wander_vect_dist
+var timeout := false
 
 
 
 
-#func enter() -> void:
-#	.enter()
-#	state_label.text = name
-	
-func ready():
+func enter() -> void:
+	.enter()
 	random.randomize()
-	timer.time_left = random.randf_range(move_time_min, move_time_max)
-	print(parent_unit.name + " " + current_motion + timer.time_left)
-	print( "X " +min_wander_x + " " + max_wander_x + " Y " + min_wander_y + " " + max_wander_y)
+	timer.wait_time = random.randf_range(move_time_min, move_time_max)
+	state_label.text = current_motion
+	print(parent_unit.name + " " + current_motion + stepify(timer.wait_time, 0.01) as String)
+#	timeout = false
 	timer.start()
 
 
@@ -56,8 +55,10 @@ func physics_process(_delta: float) -> BaseState:
 		parent_unit.velocity = wander_vector.normalized() * parent_unit.speed
 	parent_unit.velocity = parent_unit.move_and_slide(parent_unit.velocity) #option a
 #	wander_vector = parent_unit.move_and_slide(parent_unit.velocity) # option b maybe more deflection? 
+	if timeout:
+		return unit_idle_state
 	return null
 
 
-func _on_MovingTimer_timeout() -> BaseState:
-	return unit_idle_state
+func _on_MovingTimer_timeout():
+	timeout = true
