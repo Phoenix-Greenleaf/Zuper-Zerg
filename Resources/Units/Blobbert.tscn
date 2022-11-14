@@ -31,17 +31,25 @@ shape = SubResource( 1 )
 
 [node name="StateManager" type="Node2D" parent="."]
 script = ExtResource( 3 )
-starting_state = NodePath("UnitIdle")
+starting_state = NodePath("Unit Idle")
 
-[node name="UnitIdle" type="Node2D" parent="StateManager"]
+[node name="Unit Idle" type="Node2D" parent="StateManager"]
 script = ExtResource( 4 )
 state_label_node = NodePath("../../StateLabel")
 moving_node = NodePath("../Moving")
 
+[node name="IdleTimer" type="Timer" parent="StateManager/Unit Idle"]
+wait_time = 2.0
+one_shot = true
+
 [node name="Moving" type="Node2D" parent="StateManager"]
 script = ExtResource( 5 )
 state_label_node = NodePath("../../StateLabel")
-unit_idle_node = NodePath("../UnitIdle")
+unit_idle_node = NodePath("../Unit Idle")
+
+[node name="MovingTimer" type="Timer" parent="StateManager/Moving"]
+wait_time = 3.0
+one_shot = true
 
 [node name="StateLabel" type="Label" parent="."]
 margin_left = -30.0
@@ -55,3 +63,6 @@ custom_fonts/font = SubResource( 2 )
 text = "State Label stuff"
 align = 1
 valign = 1
+
+[connection signal="timeout" from="StateManager/Unit Idle/IdleTimer" to="StateManager/Unit Idle" method="_on_IdleTimer_timeout"]
+[connection signal="timeout" from="StateManager/Moving/MovingTimer" to="StateManager/Moving" method="_on_MovingTimer_timeout"]

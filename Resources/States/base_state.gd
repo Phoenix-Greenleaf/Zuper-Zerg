@@ -1,8 +1,8 @@
 extends Node2D
 class_name BaseState
 
-var parent_unit: BaseUnits
-#var target
+onready var parent_unit: BaseUnits
+
 
 func enter() -> void:
 	pass
@@ -10,13 +10,13 @@ func enter() -> void:
 func exit() -> void:
 	pass
 
-func input(event: InputEvent) -> BaseState: #event only happens once if held. for held commands, use Input singleton for polling.
-	if event.is_action_pressed("click"): #left mouse click
+func input(event: InputEvent) -> BaseState:
+	if event.is_action_pressed("left_click"):
 		parent_unit.target = get_global_mouse_position()
 	return null
 
-func process(delta: float) -> BaseState:
+func process(_delta: float) -> BaseState:
 	return null
 
-func physics_process(delta: float) -> BaseState:
+func physics_process(_delta: float) -> BaseState:
 	return null
