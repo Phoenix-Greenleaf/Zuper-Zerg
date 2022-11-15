@@ -38,7 +38,7 @@ script = ExtResource( 4 )
 state_label_node = NodePath("../../StateLabel")
 moving_node = NodePath("../Moving")
 
-[node name="IdleTimer" type="Timer" parent="StateManager/Unit Idle"]
+[node name="Timer" type="Timer" parent="StateManager/Unit Idle"]
 wait_time = 2.0
 one_shot = true
 
@@ -47,7 +47,7 @@ script = ExtResource( 5 )
 state_label_node = NodePath("../../StateLabel")
 unit_idle_node = NodePath("../Unit Idle")
 
-[node name="MovingTimer" type="Timer" parent="StateManager/Moving"]
+[node name="Timer" type="Timer" parent="StateManager/Moving"]
 wait_time = 3.0
 one_shot = true
 
@@ -64,5 +64,5 @@ text = "State Label stuff"
 align = 1
 valign = 1
 
-[connection signal="timeout" from="StateManager/Unit Idle/IdleTimer" to="StateManager/Unit Idle" method="_on_IdleTimer_timeout"]
-[connection signal="timeout" from="StateManager/Moving/MovingTimer" to="StateManager/Moving" method="_on_MovingTimer_timeout"]
+[connection signal="timeout" from="StateManager/Unit Idle/Timer" to="StateManager/Unit Idle" method="_on_Timer_timeout"]
+[connection signal="timeout" from="StateManager/Moving/Timer" to="StateManager/Moving" method="_on_Timer_timeout"]

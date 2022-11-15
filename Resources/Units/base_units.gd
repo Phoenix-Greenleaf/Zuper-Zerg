@@ -2,7 +2,7 @@ extends KinematicBody2D
 class_name BaseUnits
 
 #variable declaration and initialzation section
-export (int) var speed = 20 
+export (int) var speed = 15 
 
 var velocity = Vector2.ZERO  
 

@@ -44,3 +44,12 @@ position = Vector2( 175, 82 )
 
 [node name="Blobbert3" parent="YSort" instance=ExtResource( 1 )]
 position = Vector2( 282, 144 )
+
+[node name="Blobbert4" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 132, 154 )
+
+[node name="Blobbert5" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 138, 108 )
+
+[node name="Blobbert6" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 189, 122 )
